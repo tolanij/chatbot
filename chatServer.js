@@ -94,7 +94,7 @@ function bot(data,socket,questionNum) {
   // load next question
   }
   else{
-    answer= 'I have nothing more to say!';// output response
+    answer= 'I have nothing more to say! goodbye '+ name;// output response
     waitTime =0;
     question = '';
   }
