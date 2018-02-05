@@ -57,38 +57,38 @@ function bot(data,socket,questionNum) {
   question = 'How old are you '+name+'?';			    	// load next question
   }
   else if (questionNum == 1) {
-  answer= 'Really ' + input + ' Years old? So that means you where born in: ' + (2018-parseInt(input));// output response
+  answer= 'Really ' + input + ' Years old? You dont look it...';// output response
   waitTime =2000;
-  question = 'Where do you live?';			    	// load next question
+  question = 'Yes ' + name + ', I can see you. Creeped out?';			    	// load next question
   }
   else if (questionNum == 2) {
-  answer= ' Cool! I have never been to ' + input+'.';
+  answer= ' Doesnt matter, '+'my eyes are all over Roosevelt Island.';
   waitTime =2000;
-  question = 'Whats your favorite Color?';			    	// load next question
+  question = 'Whats your favorite way to get to and from the island?';			    	// load next question
   }
   else if (questionNum == 3) {
-  answer= 'Ok, ' + input+' it is.';
-  socket.emit('changeBG',input.toLowerCase());
-  waitTime = 2000;
-  question = 'Can you still read the font?';			    	// load next question
-  }
-  else if (questionNum == 4) {
-    if(input.toLowerCase()==='yes'|| input===1){
-      answer = 'Perfect!';
-      waitTime =2000;
-      question = 'Whats your favorite place?';
+    if(input.toLowerCase()==='tram'|| input==='the tram'){
+      answer = 'Its pretty up there, would be a pity if the cable snapped while you were up there though...';
+      waitTime =4000;
+      question = '';
     }
-    else if(input.toLowerCase()==='no'|| input===0){
-        socket.emit('changeFont','white'); /// we really should look up the inverse of what we said befor.
-        answer='How about now?'
+    else if(input.toLowerCase()==='subway'|| input==="the f" || input==="the subway"){
+        answer='Thats a lie, literally everyone including me hates the F'
         question='';
-        waitTime =0;
-        questionNum--; // Here we go back in the question number this can end up in a loop
+        waitTime =2000;
+    else if(input.toLowerCase()==='ferry'|| input==="the ferry" || input==="boat"){
+        answer='Thats my favorite too, as long as I dont get wet.'
+        question='';
+        waitTime =2000;
+    else if(input.toLowerCase()==='car'|| input==="uber" || input==="lyft"){
+        answer='Maybe you should be more enviormentally friendly and take public transport '
+        question='';
+        waitTime =2000;
     }else{
-      answer=' I did not understand you. Can you please answer with simply with yes or no.'
+      answer='um, thats not a real way of getting to the island'
       question='';
       questionNum--;
-      waitTime =0;
+      waitTime =1;
     }
   // load next question
   }
