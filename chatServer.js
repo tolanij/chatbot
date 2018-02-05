@@ -30,7 +30,7 @@ io.on('connect', function(socket) {
   var questionNum = 0; // keep count of question, used for IF condition.
   socket.on('loaded', function(){// we wait until the client has loaded and contacted us that it is ready to go.
 
-  socket.emit('answer',"Hey, Hello I am Roosevelt Island's AI."); //We start with the introduction;
+  socket.emit('answer',"Hey, Hello I am Rosy, RI's AI."); //We start with the introduction;
   setTimeout(timedQuestion, 2500, socket,"What is your Name?"); // Wait a moment and respond with a question.
 
 });
@@ -57,18 +57,18 @@ function bot(data,socket,questionNum) {
   question = 'How old are you '+name+'?';			    	// load next question
   }
   else if (questionNum == 1) {
-  answer= 'Really ' + input + ' Years old? You dont look it...';// output response
-  waitTime =2000;
-  question = 'Yes ' + name + ', I can see you. Creeped out?';			    	// load next question
+  answer= 'Really ' + input + ' Years old?\nYou dont look it...';// output response
+  waitTime =3000;
+  question = 'Yes ' + name + ',I can see you.\nCreeped out?';			    	// load next question
   }
   else if (questionNum == 2) {
   answer= ' Doesnt matter, '+'my eyes are all over Roosevelt Island.';
-  waitTime =2000;
+  waitTime =3000;
   question = 'Whats your favorite way to get to and from the island?';			    	// load next question
   }
   else if (questionNum == 3) {
     if(input.toLowerCase()==='tram'|| input==='the tram'){
-      answer = 'Its pretty up there, would be a pity if the cable snapped while you were up there though...\n goodbye' + name;
+      answer = 'Its pretty up there, would be a pity if the cable snapped while you were up there though...\n goodbye ' + name;
       waitTime =4000;
       question = '';
     }
@@ -88,9 +88,9 @@ function bot(data,socket,questionNum) {
         waitTime =2000;
     }else{
       answer='um, thats not a real way of getting to the island';
-      question='';
+      question=' ';
       questionNum--;
-      waitTime =1;
+      waitTime =1000;
     }
   // load next question
   }
