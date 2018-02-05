@@ -68,26 +68,26 @@ function bot(data,socket,questionNum) {
   }
   else if (questionNum == 3) {
     if(input.toLowerCase()==='tram'|| input==='the tram'){
-      answer = 'Its pretty up there, would be a pity if the cable snapped while you were up there though...';
+      answer = 'Its pretty up there, would be a pity if the cable snapped while you were up there though...\n goodbye' + name;
       waitTime =4000;
       question = '';
     }
     else if(input.toLowerCase()==='subway'|| input==="the f" || input==="the subway"){
-        answer='Thats a lie, literally everyone including me hates the F'
+        answer='Thats a lie, literally everyone including me hates the F, but you wont need to worry about that much longer '+name+'. Goodbye.';
         question='';
         waitTime =2000;
       }
     else if(input.toLowerCase()==='ferry'|| input==="the ferry" || input==="boat"){
-        answer='Thats my favorite too, as long as I dont get wet.'
+        answer='Thats my favorite too, as long as I dont get wet. Say hello to the fish for me the next time youre there. Bye '+name;
         question='';
         waitTime =2000;
       }
     else if(input.toLowerCase()==='car'|| input==="uber" || input==="lyft"){
-        answer='Maybe you should be more enviormentally friendly and take public transport '
+        answer='Maybe you should be more enviormentally friendly and take public transport. Though that would be harder for me to hack that your car... nevermind. Goodbye '+name;
         question='';
         waitTime =2000;
     }else{
-      answer='um, thats not a real way of getting to the island'
+      answer='um, thats not a real way of getting to the island';
       question='';
       questionNum--;
       waitTime =1;
