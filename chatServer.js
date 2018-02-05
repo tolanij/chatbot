@@ -88,8 +88,8 @@ function bot(data,socket,questionNum) {
         waitTime =2000;
     }else{
       answer='um, thats not a real way of getting to the island';
-      question=' ';
-      questionNum--;
+      question='';
+      questionNum=-2;
       waitTime =1000;
     }
   // load next question
