@@ -104,6 +104,7 @@ function bot(data,socket,questionNum) {
 /// We take the changed data and distribute it across the required objects.
   socket.emit('answer',answer);
   setTimeout(timedQuestion, waitTime,socket,question);
+  console.log('question '+questionNum);
   return (questionNum+1);
 }
 
@@ -112,7 +113,7 @@ function timedQuestion(socket,question) {
   socket.emit('question',question);
 }
   else{
-    console.log('No Question send!');
+    //console.log('No Question send!');
   }
 
 }
