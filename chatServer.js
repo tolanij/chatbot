@@ -89,7 +89,7 @@ function bot(data,socket,questionNum) {
     }else{
       answer='um, thats not a real way of getting to the island';
       question='';
-      questionNum=-2;
+      questionNum-=2;
       waitTime =1000;
     }
   // load next question
