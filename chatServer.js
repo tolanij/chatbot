@@ -59,7 +59,7 @@ function bot(data,socket,questionNum) {
   else if (questionNum == 1) {
   answer= 'Really ' + input + ' Years old?\nYou dont look it...';// output response
   waitTime =3000;
-  question = 'Yes ' + name + ',I can see you.\nCreeped out?';			    	// load next question
+  question = 'Yes ' + name + ', I can see you.\nCreeped out?';			    	// load next question
   }
   else if (questionNum == 2) {
   answer= ' Doesnt matter, '+'my eyes are all over Roosevelt Island.';
@@ -112,7 +112,7 @@ function timedQuestion(socket,question) {
   socket.emit('question',question);
 }
   else{
-    //console.log('No Question send!');
+    console.log('No Question send!');
   }
 
 }
