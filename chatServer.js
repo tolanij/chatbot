@@ -76,10 +76,12 @@ function bot(data,socket,questionNum) {
         answer='Thats a lie, literally everyone including me hates the F'
         question='';
         waitTime =2000;
+      }
     else if(input.toLowerCase()==='ferry'|| input==="the ferry" || input==="boat"){
         answer='Thats my favorite too, as long as I dont get wet.'
         question='';
         waitTime =2000;
+      }
     else if(input.toLowerCase()==='car'|| input==="uber" || input==="lyft"){
         answer='Maybe you should be more enviormentally friendly and take public transport '
         question='';
