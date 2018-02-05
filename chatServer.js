@@ -9,7 +9,7 @@ var app = express(); // webapp
 var http = require('http').Server(app); // connects http library to server
 var io = require('socket.io')(http); // connect websocket library to server
 var serverPort = 8000;
-
+var name;
 
 //---------------------- WEBAPP SERVER SETUP ---------------------------------//
 // use express to create the simple webapp
@@ -48,7 +48,6 @@ function bot(data,socket,questionNum) {
   var answer;
   var question;
   var waitTime;
-  var name;
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
