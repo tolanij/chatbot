@@ -48,12 +48,14 @@ function bot(data,socket,questionNum) {
   var answer;
   var question;
   var waitTime;
+  var name;
 
 /// These are the main statments that make up the conversation.
   if (questionNum == 0) {
-  answer= 'Hello ' + input + ' :-)';// output response
+  name= input
+  answer= 'Hi ' + name + ' :-)';// output response
   waitTime =2000;
-  question = 'How old are you?';			    	// load next question
+  question = 'How old are you '+name+'?';			    	// load next question
   }
   else if (questionNum == 1) {
   answer= 'Really ' + input + ' Years old? So that means you where born in: ' + (2018-parseInt(input));// output response
