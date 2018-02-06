@@ -87,9 +87,9 @@ function bot(data,socket,questionNum) {
         question='';
         waitTime =2000;
     }else{
-      answer='um, thats not a real way of getting to the island';
+      answer='um, thats not a real way of getting to or from the island. Good thing you wont need to worry about that. Goodbye '+name;
       question='';
-      questionNum-=2;
+      questionNum-=1;
       waitTime =1000;
     }
   // load next question
